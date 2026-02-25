@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tham Gia Câu Lạc Bộ</title>
+    <style>
+        /* 1. Nền Gradient chuyển động */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* 2. Hiệu ứng Kính mờ cho Form */
+        .container {
+            margin: 60px 20px;
+            max-width: 450px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* 3. Trang trí các ô nhập liệu */
+        .form-group { margin-bottom: 20px; }
+        
+        label { 
+            display: block; 
+            margin-bottom: 8px; 
+            color: #555; 
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #e73c7e;
+            box-shadow: 0 0 8px rgba(231, 60, 126, 0.2);
+        }
+
+        /* 4. Nút bấm rực rỡ */
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(to right, #e73c7e, #ee7752);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(231, 60, 126, 0.4);
+        }
+
+        /* 5. Footer "vô hình" nhưng tinh tế */
+        footer {
+            margin-top: auto;
+            width: 100%;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .footer-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #fff;
+            color: #e73c7e;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover {
+            background: #e73c7e;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Gia Nhập Team!</h2>
+ <form>
+    <div class="form-group">
+        <label>👤 Họ và Tên</label>
+        <input type="text" placeholder="Nguyễn Văn A" required>
+    </div>
+
+    <div style="display: flex; gap: 15px;">
+        <div class="form-group" style="flex: 1;">
+            <label>📞 Số điện thoại</label>
+            <input type="tel" placeholder="0901234xxx" required>
+        </div>
+        <div class="form-group" style="flex: 1;">
+            <label>✉️ Email</label>
+            <input type="email" placeholder="name@gmail.com" required>
+        </div>
+    </div>
+
+    <div style="display: flex; gap: 15px;">
+        <div class="form-group" style="flex: 1;">
+            <label>📅 Ngày sinh</label>
+            <input type="date" required>
+        </div>
+        <div class="form-group" style="flex: 1;">
+            <label>🚻 Giới tính</label>
+            <select>
+                <option value="nam">Nam</option>
+                <option value="nu">Nữ</option>
+                <option value="khac">Khác</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>🎯 Bạn chọn Câu lạc bộ nào?</label>
+        <select>
+            <option>Nhiếp ảnh (Media)</option>
+            <option>Âm nhạc (Acoustic)</option>
+            <option>Công nghệ (IT)</option>
+            <option>Thể thao (E-Sport)</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>🌟 Tài năng hoặc Kinh nghiệm (nếu có)</label>
+        <textarea rows="3" placeholder="Ví dụ: Biết chơi Guitar, Có kinh nghiệm edit video 2 năm..."></textarea>
+    </div>
+
+    <button type="submit">Gửi Đơn Đăng Ký ✨</button>
+</form>
+</div>
+
+<footer>
+    <p>Bạn đang xem trang thông tin chính thức.</p>
+    <a href="index.html" class="footer-link">👉 ĐĂNG KÝ THÀNH VIÊN NGAY</a>
+</footer>
+
+</body>
+</html>
